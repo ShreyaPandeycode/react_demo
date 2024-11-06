@@ -1,0 +1,160 @@
+/* src/App.css */
+
+/* src/App.css */
+/* src/App.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f5f7fa;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f7fa;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.header .profile {
+  display: flex;
+  align-items: center;
+}
+
+.header .profile .notification-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #999;
+}
+
+.header .profile .profile-initials {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.chapter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chapter-header h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.chapter-header .progress-bar {
+  width: 300px;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.chapter-header .progress-bar .progress {
+  background-color: #333;
+  height: 100%;
+}
+
+.learning-material {
+  margin-top: 20px;
+}
+
+.learning-material h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.learning-material .item {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.learning-material .item span:first-child {
+  font-weight: bold;
+}
+
+.learning-material .item span:last-child {
+  color: #999;
+}
+
+.gradient-border {
+  position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+  padding-bottom: 1px; /* Add space for the bottom border */
+}
+
+.gradient-border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px; /* Height of the border */
+  background: linear-gradient(90deg, rgba(23, 43, 77, 0) 0%, #172B4D 49.54%, rgba(5, 68, 94, 0) 100%);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Adjust sidebar width for smaller screens */
+  }
+
+  .header {
+    flex-direction: column; /* Stack header elements on smaller screens */
+    align-items: flex-start;
+  }
+
+  .chapter-header .progress-bar {
+    width: 200px; /* Adjust progress bar width */
+  }
+
+  /* Add more media queries for different breakpoints if needed */
+}
